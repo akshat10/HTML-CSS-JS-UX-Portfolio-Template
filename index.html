@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MyFinalPortfolio</title>
+  <base href="/">
+  <style>
+    *{
+      margin:0;
+    }
+    .welcome {
+      font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+      background-color: #212121;
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+    .welcome--grid {
+      width: 80%;
+      display: grid;
+      justify-content: center;
+      grid-gap: 5rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    @media screen and (max-width: 75em) {
+      .welcome--grid {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+        grid-gap: 3rem;
+        margin: 3rem auto 3rem;
+      }
+    }
+    @media screen and (max-width: 56.25em) {
+      .welcome--grid {
+        grid-gap: 3rem;
+        margin: 3rem auto 3rem;
+      }
+    }
+    @media screen and (max-width: 37.5em) {
+      .welcome--grid {
+        grid-gap: 2rem;
+        margin: 3rem auto 3rem;
+      }
+    }
+    .welcome--logo {
+      align-self: center;
+      justify-self: center;
+      max-width: 30rem;
+    }
+    .welcome--logo > img {
+      width: 100%;
+    }
+    .welcome--desc {
+      display: grid;
+      grid-template-rows: 1fr max-content;
+      color: white;
+      overflow: hidden;
+      max-width: 30rem;
+    }
+    .welcome--text {
+      font-size: 1rem;
+      color: #FFFFFF;
+      font-weight: 100;
+      align-self: start;
+      line-height: 1.4rem;
+    }
+    .welcome--links {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 75em) {
+      .welcome--links {
+        padding-top: 2rem;
+      }
+    }
+    @media screen and (max-width: 37.5em) {
+      .welcome--links {
+        padding-top: 2rem;
+      }
+    }
+    .welcome--links a {
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 100;
+      text-decoration: none;
+      background: linear-gradient(180deg, transparent 65%, #F47921 0) no-repeat;
+      background-size: 0 100%;
+      transition: background-size .4s ease;
+    }
+    .welcome--links a:hover {
+      background-size: 100% 100%;
+      font-weight: 300;
+    }
+    @media screen and (max-width: 37.5em) {
+      .welcome--links a {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="welcome">
+
+      <div class="welcome--grid">
+
+        <div class="welcome--logo">
+          <img src="img/home/me.png" alt="Akshat's Logo">
+        </div>
+
+        <div class="welcome--desc">
+
+          <p class="welcome--text">
+            <span style="font-size: 1.2rem;font-weight: 300;">Hello, I'm Akshat!</span><br/><br/><br/>
+            I'm a designer and a frontend engineer. I design digital products by understanding their needs.
+            I’m currently working at the University of Michigan Cancer Center to create an application that will help
+            genetic counselors to predict a patient’s predisposition towards different kinds of cancers.
+            Additionally, I’m interested in bridging the gap that the visually impaired students face. I’m working on a tool
+            that will help blind school students to collaborate remotely with their sighted peers.
+          </p>
+
+
+
+          <div class="welcome--links">
+            <a  href="/work" class="links--1">WORK</a>
+            <a href="" class="links--2">ABOUT</a>
+            <a href="" class="links--3">RESUME</a>
+            <a href="" class="links--4">CONTACT</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</body>
+</html>
