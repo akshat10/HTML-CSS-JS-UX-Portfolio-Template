@@ -1,1 +1,230 @@
-*,*::after,*::before{margin:0;padding:0;-webkit-box-sizing:inherit;box-sizing:inherit}html{font-size:62.5%;background-color:red}@media only screen and (max-width: 75em){html{font-size:56.25%}}@media only screen and (max-width: 56.25em){html{font-size:50%}}@media only screen and (min-width: 112.5em){html{font-size:75%}}body{-webkit-box-sizing:border-box;box-sizing:border-box}@media only screen and (max-width: 56.25em){body{padding:0}}.u-center-text{text-align:center !important}.u-margin-bottom-small{margin-bottom:1.5rem !important}.u-margin-bottom-medium{margin-bottom:4rem !important}@media only screen and (max-width: 56.25em){.u-margin-bottom-medium{margin-bottom:3rem !important}}.u-margin-bottom-big{margin-bottom:8rem !important}@media only screen and (max-width: 56.25em){.u-margin-bottom-big{margin-bottom:5rem !important}}.u-margin-top-big{margin-top:8rem !important}.u-margin-top-huge{margin-top:10rem !important}
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 3s;
+    animation-iteration-count: 3; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.work--heading {
+  font-size: 3rem;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-weight: 900; }
+  @media only screen and (max-width: 75em) {
+    .work--heading {
+      font-size: 2.5rem; } }
+
+.work--links {
+  font-family: 'IBM Plex Sans', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-size: 1.8rem;
+  font-weight: 400; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.sidebar {
+  display: grid;
+  position: fixed;
+  color: red; }
+
+body {
+  background-color: #e5e5e5; }
+
+.work--grid {
+  display: grid;
+  grid-template-columns: [sidebar-primary] 300px [main-content] auto [sidebar-secondary] 200px;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  width: 90vw; }
+  @media only screen and (max-width: 75em) {
+    .work--grid {
+      width: 100%;
+      grid-template-columns: [sidebar-primary] 1fr [main-content] 3fr;
+      grid-gap: 4rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .work--grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      grid-gap: 0; } }
+  .work--grid > * {
+    padding: 4rem; }
+
+.sidebar--primary {
+  grid-column: sidebar-primary;
+  color: #DC3522; }
+  @media only screen and (max-width: 43.75em) {
+    .sidebar--primary {
+      grid-row: 1;
+      border-bottom: 2px solid currentColor; } }
+  .sidebar--primary--heading {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1rem; }
+    @media only screen and (max-width: 43.75em) {
+      .sidebar--primary--heading {
+        text-align: center;
+        border-bottom: 0; } }
+  .sidebar--primary--list {
+    list-style: none;
+    padding: 2rem 2rem 2rem 0; }
+    @media only screen and (max-width: 43.75em) {
+      .sidebar--primary--list {
+        padding: 2rem 0; } }
+  @media only screen and (max-width: 43.75em) {
+    .sidebar--primary ul > li {
+      display: inline-block;
+      width: 23%;
+      text-align: center; } }
+
+.sidebar--secondary {
+  grid-column: sidebar-secondary; }
+  @media only screen and (max-width: 75em) {
+    .sidebar--secondary {
+      display: none; } }
+  .sidebar--secondary--heading {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1rem; }
+  .sidebar--secondary--list {
+    list-style: none;
+    padding: 2rem 2rem 2rem 0; }
+    .sidebar--secondary--list a {
+      text-decoration: none;
+      color: black; }
+
+.main {
+  grid-column: main-content / sidebar-secondary;
+  grid-row: 1; }
+  @media only screen and (max-width: 43.75em) {
+    .main {
+      grid-row: 2; } }
+  .main--heading {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1rem; }
+  .main--content {
+    padding: 2rem 0 2rem 0; }
+
+nav.sidebar--secondary div {
+  position: fixed; }
+  @media only screen and (max-width: 43.75em) {
+    nav.sidebar--secondary div {
+      position: relative; } }
+
+nav.sidebar--primary div {
+  position: fixed; }
+  @media only screen and (max-width: 43.75em) {
+    nav.sidebar--primary div {
+      position: relative; } }
+
+a.active {
+  background-color: black;
+  color: #fff; }
