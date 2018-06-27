@@ -31,8 +31,12 @@ body {
     body {
       padding: 0; } }
 
+hr.styleDotted {
+  border-top: 1px dotted #8c8b8b;
+  border-bottom: 1px dotted #fff; }
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Ibm Plex Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7; }
@@ -135,9 +139,6 @@ body {
   position: fixed;
   color: red; }
 
-body {
-  background-color: #e5e5e5; }
-
 .work--grid {
   display: grid;
   grid-template-columns: [sidebar-primary] 300px [main-content] 1fr [sidebar-secondary] 200px;
@@ -159,126 +160,15 @@ body {
 
 .sidebar--primary {
   grid-column: sidebar-primary;
-  color: #DC3522; }
-  @media only screen and (max-width: 75em) {
-    .sidebar--primary {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 30rem 1fr; } }
-  @media only screen and (max-width: 43.75em) {
-    .sidebar--primary {
-      display: block;
-      grid-row: 1;
-      border-bottom: 2px solid currentColor; } }
-  .sidebar--primary--heading {
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 1rem; }
-    @media only screen and (max-width: 43.75em) {
-      .sidebar--primary--heading {
-        text-align: center;
-        border-bottom: 0; } }
-  .sidebar--primary--list {
-    list-style: none;
-    padding: 2rem 2rem 2rem 0; }
-    @media only screen and (max-width: 43.75em) {
-      .sidebar--primary--list {
-        padding: 2rem 0; } }
-  @media only screen and (max-width: 43.75em) {
-    .sidebar--primary ul > li {
-      display: inline-block;
-      width: 23%;
-      text-align: center; } }
-  @media only screen and (max-width: 75em) {
-    .sidebar--primary .main--nav--onTab {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      padding: 4rem; } }
-  @media only screen and (max-width: 43.75em) {
-    .sidebar--primary .main--nav--onTab {
-      padding: 0; } }
-  .sidebar--primary .side--nav--onTab {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    color: black;
-    display: none; }
-    @media only screen and (max-width: 75em) {
-      .sidebar--primary .side--nav--onTab {
-        display: block; } }
-    @media only screen and (max-width: 43.75em) {
-      .sidebar--primary .side--nav--onTab {
-        display: none; } }
-
-.sidebar--secondary {
-  grid-column: sidebar-secondary; }
-  @media only screen and (max-width: 75em) {
-    .sidebar--secondary {
-      display: none; } }
-  .sidebar--secondary--heading {
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 1rem; }
-  .sidebar--secondary--list {
-    list-style: none;
-    padding: 2rem 2rem 2rem 0; }
-    .sidebar--secondary--list a {
-      text-decoration: none;
-      color: black; }
-
-.main {
-  grid-column: main-content / sidebar-secondary;
-  grid-row: 1; }
-  @media only screen and (max-width: 43.75em) {
-    .main {
-      grid-row: 2; } }
-  .main--heading {
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 1rem; }
-  .main--content {
-    padding: 2rem 0 2rem 0; }
-
-nav.sidebar--secondary div {
-  position: fixed; }
-  @media only screen and (max-width: 43.75em) {
-    nav.sidebar--secondary div {
-      position: relative; } }
-
-nav.sidebar--primary div {
-  position: fixed; }
-  @media only screen and (max-width: 43.75em) {
-    nav.sidebar--primary div {
-      position: relative; } }
-
-a.active {
-  background-color: black;
-  color: #fff; }
-
-body {
-  background-color: #e5e5e5; }
-
-.work--grid {
-  display: grid;
-  grid-template-columns: [sidebar-primary] 300px [main-content] 1fr [sidebar-secondary] 200px;
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  width: 90vw; }
-  @media only screen and (max-width: 75em) {
-    .work--grid {
-      width: 100%;
-      grid-template-columns: [sidebar-primary] 200px [main-content] 3fr;
-      grid-gap: 4rem; } }
-  @media only screen and (max-width: 43.75em) {
-    .work--grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr;
-      grid-gap: 0; } }
-  .work--grid > * {
-    padding: 4rem; }
-
-.sidebar--primary {
-  grid-column: sidebar-primary;
-  color: blue; }
+  color: #2CAAFF; }
+  .sidebar--primary a.pageActive {
+    background-color: rgba(44, 170, 255, 0.2); }
   .sidebar--primary a.active {
     background-color: black;
     color: #fff; }
+  .sidebar--primary--link {
+    text-decoration: none;
+    color: currentColor; }
   @media only screen and (max-width: 75em) {
     .sidebar--primary {
       display: grid;
@@ -372,3 +262,18 @@ nav.sidebar--primary div {
   @media only screen and (max-width: 43.75em) {
     nav.sidebar--primary div {
       position: relative; } }
+
+.project {
+  padding: 4rem; }
+  .project:nth-child(even) {
+    background-color: #f7f7f7; }
+
+.project--description {
+  display: grid;
+  width: 100%;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr; }
+  .project--description > * {
+    min-height: 20rem; }
