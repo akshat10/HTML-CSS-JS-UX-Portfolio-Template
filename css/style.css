@@ -161,8 +161,11 @@ body {
   color: #2CAAFF; }
   .sidebar--primary a.pageActive {
     background-color: rgba(44, 170, 255, 0.2); }
-  .sidebar--primary a.active {
+  .sidebar--primary ul a.active {
     background-color: black;
+    color: #fff; }
+  .sidebar--primary ol a.active {
+    background-color: #db0a5b;
     color: #fff; }
   .sidebar--primary--link {
     text-decoration: none;
@@ -325,7 +328,7 @@ nav.sidebar--primary div {
     color: black;
     font-weight: 600;
     text-decoration: none;
-    background: linear-gradient(180deg, transparent 65%, #2CAAFF 0) no-repeat;
+    background: linear-gradient(180deg, transparent 65%, #db0a5b 0) no-repeat;
     background-size: 0 100%;
     transition: background-size .4s ease; }
   .project--description a:hover {

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>Work</title>
+    <style>
+       
+    </style>
 </head>
 
 <body>
@@ -32,9 +35,9 @@
             <nav class="side--nav--onTab p--side--nav--onTab">
                 <div>
                     <h1 class="sidebar--secondary--heading work--heading">Content</h1>
-                    <ul data-gumshoe class="sidebar--secondary--list">
+                    <ol  data-gumshoe class="sidebar--secondary--list">
                         <li>
-                            <a data-scroll href="#wacc">UX Consulting for WACC</a>
+                            <a data-scroll href="#commcare">Consulting for CommCare</a>
                         </li>
                         <li>
                             <a data-scroll href="#research">Research</a>
@@ -69,12 +72,13 @@
                     <br>
                     <!-- End of the primary text for the projects page -->
 
-                    <ol class="project--list">
+                    <ol data-gumshoe class="project--list">
 
                         <!-- Project 1 -->
-                        <li>
+                        <li id="commcare">
+                            
                             <hr class="styleDotted">
-
+                            <span style="font-size: 10rem; position: absolute; color: #db0a5b; font-family: 'IBM Plex Mono'; font-weight: 200;">#1</span>
                             <!-- Start of project 1 -->
                             <div id="Project 1" class="project">
 
@@ -146,31 +150,12 @@
 
         </div>
     </div>
-    <script src="/js/gumshoe.js"></script>
+    <script src="js/gumshoe.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         var scroll = new SmoothScroll('a[href*="#"]');
-
-        //Set up correct gumshoe based on screen width
-        if (window.matchMedia("(min-width: 1200px)").matches) {
-            gumshoe.init({
-                selector: 'nav.sidebar--secondary [data-gumshoe] a', // Default link selector (must use a valid CSS selector)
-                container: window, // The element to spy on scrolling in (must be a valid DOM Node)
-                offset: 0, // Distance in pixels to offset calculations
-                activeClass: 'active', // Class to apply to active navigation link and its parent list item
-                scrollDelay: false, // Wait until scrolling has stopped before updating the navigation
-                callback: function (nav) { } // Callback to run after setting active link
-            });
-        } else {
-            gumshoe.init({
-                selector: 'nav.side--nav--onTab [data-gumshoe] a', // Default link selector (must use a valid CSS selector)
-                container: window, // The element to spy on scrolling in (must be a valid DOM Node)
-                offset: 0, // Distance in pixels to offset calculations
-                activeClass: 'active', // Class to apply to active navigation link and its parent list item
-                scrollDelay: false, // Wait until scrolling has stopped before updating the navigation
-                callback: function (nav) { } // Callback to run after setting active link
-            });
-        }
+        
+        gumshoe.init();
 
     </script>
 </body>
