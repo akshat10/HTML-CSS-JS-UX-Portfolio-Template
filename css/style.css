@@ -134,17 +134,15 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
-.sidebar {
-  display: grid;
-  position: fixed;
-  color: red; }
-
 .work--grid {
   display: grid;
   grid-template-columns: [sidebar-primary] 300px [main-content] 1fr [sidebar-secondary] 200px;
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   width: 90vw; }
+  @media only screen and (min-width: 112.5em) {
+    .work--grid {
+      grid-template-columns: [sidebar-primary] 30rem [main-content] 120rem [sidebar-secondary] 20rem; } }
   @media only screen and (max-width: 75em) {
     .work--grid {
       width: 100%;
@@ -263,17 +261,116 @@ nav.sidebar--primary div {
     nav.sidebar--primary div {
       position: relative; } }
 
+.p--work--grid {
+  display: grid;
+  grid-template-columns: [sidebar-primary] 300px [main-content] 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  max-width: 150rem; }
+  @media only screen and (min-width: 112.5em) {
+    .p--work--grid {
+      grid-template-columns: [sidebar-primary] 30rem [main-content] 120rem;
+      max-width: 150rem; } }
+  @media only screen and (max-width: 75em) {
+    .p--work--grid {
+      width: 100%;
+      grid-template-columns: [sidebar-primary] 200px [main-content] 3fr;
+      grid-gap: 4rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .p--work--grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      grid-gap: 0; } }
+  .p--work--grid > * {
+    padding: 4rem; }
+
 .project {
-  padding: 4rem; }
-  .project:nth-child(even) {
-    background-color: #f7f7f7; }
+  padding: 10rem 10rem; }
+  @media only screen and (max-width: 75em) {
+    .project {
+      padding: 5rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .project {
+      padding: 3rem; } }
+
+.gray {
+  background-color: #f7f7f7; }
+
+.sub-heading {
+  font-weight: lighter; }
 
 .project--description {
   display: grid;
-  width: 100%;
-  grid-gap: 2rem;
+  grid-gap: 10rem;
   align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr; }
-  .project--description > * {
-    min-height: 20rem; }
+  justify-content: center;
+  grid-template-columns: 30rem 1fr;
+  grid-template-rows: 1fr; }
+  @media only screen and (max-width: 75em) {
+    .project--description {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      grid-gap: 5rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .project--description {
+      grid-gap: 2rem; } }
+  .project--description img {
+    justify-self: center;
+    align-self: center; }
+    @media only screen and (max-width: 75em) {
+      .project--description img {
+        justify-self: center; } }
+  .project--description a {
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(180deg, transparent 65%, #2CAAFF 0) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease; }
+  .project--description a:hover {
+    background-size: 100% 100%;
+    font-weight: 600; }
+
+.project--list {
+  list-style: none; }
+
+.project--text {
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  height: 100%; }
+  .project--text h2 {
+    align-self: start;
+    padding-bottom: 1rem; }
+
+.intro--text {
+  max-width: 80%; }
+  @media only screen and (max-width: 75em) {
+    .intro--text {
+      max-width: 100%; } }
+
+.p--sidebar--primary {
+  grid-column: sidebar-primary;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 24rem 1fr; }
+  @media only screen and (max-width: 43.75em) {
+    .p--sidebar--primary {
+      display: block;
+      grid-row: 1;
+      border-bottom: 2px solid currentColor; } }
+  .p--sidebar--primary .p--main--nav--onTab {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 4rem 4rem 4rem 4rem; }
+    @media only screen and (max-width: 43.75em) {
+      .p--sidebar--primary .p--main--nav--onTab {
+        padding: 0; } }
+  .p--sidebar--primary .p--side--nav--onTab {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: black;
+    display: block; }
+    @media only screen and (max-width: 43.75em) {
+      .p--sidebar--primary .p--side--nav--onTab {
+        display: none; } }
