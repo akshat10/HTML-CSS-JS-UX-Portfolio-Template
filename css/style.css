@@ -104,6 +104,10 @@ body {
   font-size: 3rem;
   font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   font-weight: 900; }
+  @media only screen and (max-width: 43.75em) {
+    .work--heading {
+      text-align: center;
+      padding: 1rem; } }
 
 .work--links {
   font-family: 'IBM Plex Sans', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
@@ -165,7 +169,7 @@ body {
     background-color: black;
     color: #fff; }
   .sidebar--primary ol a.active {
-    background-color: #db0a5b;
+    background-color: black;
     color: #fff; }
   .sidebar--primary--link {
     text-decoration: none;
@@ -194,10 +198,12 @@ body {
       .sidebar--primary--list {
         padding: 2rem 0; } }
   @media only screen and (max-width: 43.75em) {
-    .sidebar--primary ul > li {
-      display: inline-block;
-      width: 23%;
-      text-align: center; } }
+    .sidebar--primary ul {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row; } }
+  .sidebar--primary ul > li a:hover {
+    background-color: rgba(44, 170, 255, 0.2); }
   @media only screen and (max-width: 75em) {
     .sidebar--primary .main--nav--onTab {
       grid-column: 1/2;
@@ -235,6 +241,9 @@ body {
     .sidebar--secondary--list a {
       text-decoration: none;
       color: black; }
+    .sidebar--secondary--list a:hover {
+      background-color: black;
+      color: #fff; }
 
 .main {
   grid-column: main-content / sidebar-secondary;
@@ -281,11 +290,15 @@ nav.sidebar--primary div {
       grid-gap: 4rem; } }
   @media only screen and (max-width: 43.75em) {
     .p--work--grid {
+      width: 100%;
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
       grid-gap: 0; } }
   .p--work--grid > * {
     padding: 4rem; }
+    @media only screen and (max-width: 43.75em) {
+      .p--work--grid > * {
+        padding: 0; } }
 
 .project {
   padding: 10rem 10rem; }
@@ -328,7 +341,7 @@ nav.sidebar--primary div {
     color: black;
     font-weight: 600;
     text-decoration: none;
-    background: linear-gradient(180deg, transparent 65%, #db0a5b 0) no-repeat;
+    background: linear-gradient(180deg, transparent 65%, #2CAAFF 0) no-repeat;
     background-size: 0 100%;
     transition: background-size .4s ease; }
   .project--description a:hover {
@@ -351,6 +364,9 @@ nav.sidebar--primary div {
   @media only screen and (max-width: 75em) {
     .intro--text {
       max-width: 100%; } }
+  @media only screen and (max-width: 43.75em) {
+    .intro--text {
+      padding: 2rem; } }
 
 .p--sidebar--primary {
   grid-column: sidebar-primary;
@@ -361,7 +377,8 @@ nav.sidebar--primary div {
     .p--sidebar--primary {
       display: block;
       grid-row: 1;
-      border-bottom: 2px solid currentColor; } }
+      border-bottom: 2px solid currentColor;
+      padding: 1rem; } }
   .p--sidebar--primary .p--main--nav--onTab {
     grid-column: 1/2;
     grid-row: 1/2;
