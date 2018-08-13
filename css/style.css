@@ -1,3 +1,19 @@
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /*
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
@@ -34,6 +50,18 @@ body {
 hr.styleDotted {
   border-top: 1px dotted #8c8b8b;
   border-bottom: 1px dotted #fff; }
+
+.caseStudyImage {
+  max-width: 50%;
+  min-width: 30rem;
+  height: auto;
+  margin: 2rem auto; }
+
+.caseStudyImageMed {
+  max-width: 65%; }
+
+.caseStudyImageBig {
+  max-width: 80%; }
 
 body {
   font-family: "Ibm Plex Sans", sans-serif;
@@ -114,6 +142,37 @@ body {
   font-size: 1.8rem;
   font-weight: 400; }
 
+blockquote {
+  font-size: 1.4em;
+  width: 100%;
+  margin: 3rem auto;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #2CAAFF;
+  line-height: 1.6;
+  position: relative;
+  background: #EDEDED; }
+
+blockquote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #2CAAFF;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px; }
+
+blockquote::after {
+  content: ''; }
+
+blockquote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -137,6 +196,16 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important; }
+
+.indent {
+  padding-left: 4rem; }
+
+.sidebarListIndent {
+  padding-left: 1.2rem;
+  list-style: none; }
+
+.myList li {
+  padding-top: 1.5rem; }
 
 .work--grid {
   display: grid;
@@ -223,6 +292,9 @@ body {
     @media only screen and (max-width: 43.75em) {
       .sidebar--primary .side--nav--onTab {
         display: none; } }
+    .sidebar--primary .side--nav--onTab a:hover {
+      background-color: black;
+      color: #fff; }
 
 .sidebar--secondary {
   grid-column: sidebar-secondary; }
@@ -336,6 +408,9 @@ nav.sidebar--primary div {
     @media only screen and (max-width: 75em) {
       .project--description img {
         justify-self: center; } }
+    @media only screen and (max-width: 43.75em) {
+      .project--description img {
+        width: 30rem !important; } }
   .project--description a {
     font-size: 2rem;
     color: black;
@@ -394,3 +469,8 @@ nav.sidebar--primary div {
     @media only screen and (max-width: 43.75em) {
       .p--sidebar--primary .p--side--nav--onTab {
         display: none; } }
+
+@media only screen and (max-width: 43.75em) {
+  img {
+    width: 30rem !important;
+    height: auto; } }

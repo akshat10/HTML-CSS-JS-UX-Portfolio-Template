@@ -77,7 +77,7 @@
                 <div class="main--content">
 
                     <!-- Introduction text -->
-                    <div>
+                    <div class="intro--text">
                         <p>As a Computer Engineering graduate, design has more in common with science than art for me. Art is
                             subjective, design is not. Thus, it is important for a designer to articulate his/her decisions
                             through a logical process. Here is a selection of my work, focusing on my design and thought
@@ -98,7 +98,7 @@
 
 
                                     <!-- <img src="img/dev/commcare/commcarehq.png" style="width: 30rem; padding: 0rem;height: auto; border: 1px dotted black"> -->
-                                    <img src="img/dev/commcare/commcarehq.png" style="width: 30rem;">
+                                    <img src="img/dev/commcare/commcarehq.png" style="width: 20rem;">
                                     <div class="project--text">
                                         <h2>Consulting for CommCare</h2>
 
@@ -130,7 +130,7 @@
                                 <div class="project--description">
 
 
-                                    <img src="img/dev/wacc/logo_2.png" style="width: 30rem; height: auto; background-color: white;">
+                                    <img src="img/dev/wacc/logo_2.png" style="width: 20rem; height: auto; background-color: white;">
 
                                     <div class="project--text">
                                         <h2>Consulting for WACC</h2>
@@ -164,7 +164,7 @@
                                 <div class="project--description">
 
 
-                                    <img src="img/dev/MEngage/mengage3.png" style="width: 45rem; height: auto; background-color: white;">
+                                    <img src="img/dev/MEngage/mengage3.png" style="width: 30rem; height: auto; background-color: white;">
 
                                     <div class="project--text">
                                         <h2>M-Engage</h2>
@@ -178,7 +178,7 @@
 
                                         <div>
                                                 <br>
-                                            <a href="mengage.html">Read more</a>
+                                            <a href="">Read more</a>
                                         </div>
                                     </div>
 
@@ -198,14 +198,14 @@
                                 <div class="project--description">
 
 
-                                    <img src="img/dev/plateforward/plateforward.png" style="width: 42rem; height: auto; background-color: white;">
+                                    <img src="img/dev/plateforward/plateforward.png" style="width: 45rem; height: auto; background-color: white;">
 
                                     <div class="project--text">
                                         <h2>Design Sprint for PlateForward</h2>
 
                                         <div>
                                             <h3 class="sub-heading">
-                                                Helping non profit.
+                                                Solving CommCare's low user retention problem by using research.
                                             </h3>
                                         </div>
 
@@ -231,10 +231,10 @@
                                 <div class="project--description">
 
 
-                                    <img src="img/dev/mealspace/mealspace.png" style="width: 45rem; height: auto; background-color: white;">
+                                    <img src="img/dev/commcare/commcarehq.png" style="width: 30rem; height: auto; background-color: white;">
 
                                     <div class="project--text">
-                                        <h2>Mealspace</h2>
+                                        <h2>Research for CommCare</h2>
 
                                         <div>
                                             <h3 class="sub-heading">
